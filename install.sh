@@ -20,9 +20,8 @@ function install_package {
 
         echo "no_pm=$no_pm"
         if $no_pm; then
-            echo "cmd=$cmd"
+            echo "Install without package manager"
             no_pm=false
-            /bin/bash -c "$cmd"
         else
             echo "package_manager=$package_manager"
             echo "install_command=$install_command"
