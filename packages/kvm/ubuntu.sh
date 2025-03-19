@@ -1,0 +1,1 @@
+package="qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils"
