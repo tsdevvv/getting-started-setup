@@ -20,8 +20,12 @@ echo "install_command=$install_command"
 echo "update_command=$update_command"
 echo "list_command=$list_command"
 
+if [ -z $1 ]; then
+    packages=$(ls ./packages)
 
-packages=$(ls ./packages)
+else
+    packages=$@
+fi
 
 source ./install.sh
 
