@@ -22,13 +22,13 @@ function install_package {
         if $no_pm; then
             echo "cmd=$cmd"
             no_pm=false
-            /bin/bash -c $cmd
+            /bin/bash -c "$cmd"
         else
             echo "package_manager=$package_manager"
             echo "install_command=$install_command"
             echo "package_manager_parametr=$package_manager_parametr"
             echo "package=$package"
-            $package_manager $install_command $package_manager_parametr $package
+            /bin/bash -c "$package_manager $install_command $package_manager_parametr $package"
         fi
     else
         echo "Has no setup file for $1"
