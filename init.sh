@@ -29,4 +29,4 @@ for package_name in $packages; do
     install_package $package_name $os_distro
 done
 
-echo "All packages has been installed
+echo "All packages has been installed"
