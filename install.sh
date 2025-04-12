@@ -4,15 +4,18 @@
 function install_package {
     no_pm=false
     has_setup=false
+    echo "Start installation to package: $1"
     common_file="./packages/$1/common.sh"
     echo "Check common file: $common_file"
     if [ -r $common_file ]; then
+        echo "Find a common setup file"
         source "$common_file"
         has_setup=true
     fi
     spec_file="./packages/$1/$2.sh"
-    echo "Check specific file: $common_file"
+    echo "Check specific file: $2.sh"
     if [ -r $spec_file ]; then
+        echo "Find a specific setup file"
         source "$spec_file"
         has_setup=true
     fi
